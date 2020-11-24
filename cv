@@ -22,10 +22,9 @@ RUN unzip opencv_contrib.zip
 RUN opencv-4.0.0 opencv
 RUN opencv_contrib-4.0.0 opencv_contrib
 
-
-RUN /opencv
+RUN cd ./opencv
 RUN mkdir build
-RUN cd build
+RUN cd ./build
 RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
 	-D CMAKE_INSTALL_PREFIX=/usr/local \
 	-D INSTALL_PYTHON_EXAMPLES=ON \
